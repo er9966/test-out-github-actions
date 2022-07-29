@@ -1,3 +1,5 @@
+name: basic-go
+on: [push]
 jobs:
   setup:
     steps:
