@@ -8,4 +8,6 @@ jobs:
     - uses: actions/setup-go@v3
       with:
         go-version: '1.16.1' # The Go version to download (if necessary) and use.
+    - run: go mod init math
+    - run: go mod tidy
     - run: go test 
