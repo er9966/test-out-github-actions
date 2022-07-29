@@ -1,0 +1,13 @@
+jobs:
+  setup:
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-go@v3
+      with:
+        go-version: '1.16.1' # The Go version to download (if necessary) and use.
+    - run: go run hello.go
+
+  test:
+    needs: setup
+    steps:
+      - run: go run math_test.go
